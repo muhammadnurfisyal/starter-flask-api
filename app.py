@@ -11,6 +11,9 @@ from flask_cors import CORS
 app = Flask(__name__)
 
 CORS(app)
+@app.get("/")
+def hello():
+    return "hello world!"
 
 @app.post("/")
 def start():
